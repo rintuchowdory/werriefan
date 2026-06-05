@@ -61,7 +61,7 @@ function normalizeNumber(raw) {
 
 // Fetch from numverify API
 async function numverifyLookup(number, apiKey) {
-  const url = `http://apilayer.net/api/validate?access_key=${apiKey}&number=${encodeURIComponent(number)}&country_code=DE&format=1`
+  const url = `https://apilayer.net/api/validate?access_key=${apiKey}&number=${encodeURIComponent(number)}&country_code=DE&format=1`
   const res = await fetch(url)
   if (!res.ok) throw new Error('numverify error ' + res.status)
   return res.json()
